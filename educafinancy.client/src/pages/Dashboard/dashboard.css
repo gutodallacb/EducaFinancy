@@ -1,0 +1,146 @@
+/* Layout principal */
+.app-container {
+  display: flex;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  background-color: #f9fafb;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 240px;
+  background-color: #2563eb;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.logo {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.menu a:hover,
+.menu a.active {
+  background-color: #1e40af;
+}
+
+/* Dashboard (área principal) */
+.dashboard {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+  margin-left: 240px; /* empurra o dashboard pra direita */
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.card h3 {
+  font-size: 28px;
+  color: #2563eb;
+}
+
+.card p {
+  color: #6b7280;
+}
+
+/* Lista de alunos */
+.lista-alunos {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.lista-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.novo-aluno {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.novo-aluno:hover {
+  background-color: #1e40af;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  text-align: left;
+  color: #6b7280;
+  padding-bottom: 10px;
+}
+
+td {
+  padding: 10px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+/* Status */
+.status {
+  padding: 4px 10px;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.status-ativa {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-avencer {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.status-vencida {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
